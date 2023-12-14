@@ -23,7 +23,7 @@
         android:layout_width="200dp"
         android:layout_height="25dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="Daftar Menu"
+        android:text="List Wisata"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="20sp"

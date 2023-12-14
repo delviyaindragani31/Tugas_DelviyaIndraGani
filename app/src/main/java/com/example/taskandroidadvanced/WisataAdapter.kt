@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class FoodAdapter(private var foodList:List<Food>) : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>(){
+class WisataAdapter(private var wisataList:List<Wisata>) : RecyclerView.Adapter<WisataAdapter.FoodViewHolder>(){
 
     class FoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val imageView : ImageView = itemView.findViewById(R.id.imageView)
@@ -16,17 +16,17 @@ class FoodAdapter(private var foodList:List<Food>) : RecyclerView.Adapter<FoodAd
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.food , parent , false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.wisata , parent , false)
         return FoodViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return foodList.size
+        return wisataList.size
     }
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
-        val food = foodList[position]
-        holder.imageView.setImageResource(food.image)
-        holder.textView.text = food.name
+        val wisata = wisataList[position]
+        holder.imageView.setImageResource(wisata.image)
+        holder.textView.text = wisata.name
     }
 }

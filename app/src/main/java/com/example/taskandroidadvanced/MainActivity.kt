@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity(),
     BottomNavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding: ActivityMainBinding
     private lateinit var recyclerView: RecyclerView
-    private var foodList = ArrayList<Food>()
-    private lateinit var adapter: FoodAdapter
+    private var wisataList = ArrayList<Wisata>()
+    private lateinit var adapter: WisataAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,19 +34,16 @@ class MainActivity : AppCompatActivity(),
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         addDataToList()
-        adapter = FoodAdapter(foodList)
+        adapter = WisataAdapter(wisataList)
         recyclerView.adapter = adapter
 
     }
 
     private fun addDataToList() {
-        foodList.add(Food(R.drawable.rendang, "Rendang"))
-        foodList.add(Food(R.drawable.nasigoreng, "Nasi Goreng"))
-        foodList.add(Food(R.drawable.sate, "Sate"))
-        foodList.add(Food(R.drawable.sotoayam, "Soto Ayam"))
-        foodList.add(Food(R.drawable.lontongsayur, "Lontong Sayur"))
-        foodList.add(Food(R.drawable.ampiangdadiah, "Ampiang Dadiah"))
-        foodList.add(Food(R.drawable.lamangtapai, "Lamang Tapai"))
+        wisataList.add(Wisata(R.drawable.pagaruyuang, "Istana Pagaruyuang"))
+        wisataList.add(Wisata(R.drawable.jamgadang, "Jam Gadang"))
+        wisataList.add(Wisata(R.drawable.lawang, "Puncak Lawang"))
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -63,7 +60,7 @@ class MainActivity : AppCompatActivity(),
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.nav_pesanan -> {
+            R.id.nav_beranda -> {
                 val intent = Intent(this@MainActivity, MainActivity::class.java)
                 startActivity(intent)
                 true
@@ -74,7 +71,7 @@ class MainActivity : AppCompatActivity(),
                 startActivity(intent)
                 true
             }
-            R.id.nav_pusatbantuan -> {
+            R.id.nav_notifikasi -> {
                 val intent = Intent(this@MainActivity, MainActivity::class.java)
                 startActivity(intent)
                 true

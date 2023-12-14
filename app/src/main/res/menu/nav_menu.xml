@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
         <item
-            android:id="@+id/nav_pesanan"
-            android:icon="@drawable/ic_pesanan"
-            android:title="Pesanan" />
+            android:id="@+id/nav_beranda"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Beranda" />
 
         <item
             android:id="@+id/nav_history"
@@ -12,9 +12,9 @@
             android:title="Riwayat"/>
 
         <item
-            android:id="@+id/nav_pusatbantuan"
-            android:icon="@drawable/ic_support_agent"
-            android:title="Bantuan"/>
+            android:id="@+id/nav_notifikasi"
+            android:icon="@drawable/baseline_notifications_none_24"
+            android:title="Notifikasi"/>
 
         <item
             android:id="@+id/nav_akun"
